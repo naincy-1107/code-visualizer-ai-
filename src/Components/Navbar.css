@@ -1,0 +1,120 @@
+/* Navbar layout */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg-primary);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .nav-header {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Branding */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.brand-accent {
+  color: #4f46e5; /* indigo-600 */
+}
+
+/* Nav links */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: #4f46e5;
+}
+.nav-link.active {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+/* Right side actions */
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cta-btn {
+  padding: 0.5rem 1rem;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.cta-btn:hover {
+  background: #1f2937; /* gray-800 */
+}
+
+[data-theme="dark"] .cta-btn {
+  background: #4f46e5;
+}
+[data-theme="dark"] .cta-btn:hover {
+  background: #4338ca;
+}
+
+.share-btn-nav {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.75rem;
+}
+
+/* Basic responsiveness: hide nav on small screens if needed */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .share-btn-nav {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
